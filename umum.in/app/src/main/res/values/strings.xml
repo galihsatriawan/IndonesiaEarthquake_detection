@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Umum.in</string>
+    <string name="ver_baru"><b><u>Kirim Ulang Kode Verifikasi</u></b></string>
+    <string name="phone_num">+6285604044550</string>
+    <string name="title_activity_main_dashboard">MainDashboard</string>
+    <string name="title_home">Terkini</string>
+    <string name="title_progress">Gempa</string>
+    <string name="title_profile">Video</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_try_again">Coba Lagi</string>
+    <string name="title_progress_bar">Sedang dalam proses ....</string>
+    <string name="title_about">About</string>
+    <string name="content_about">Markeet is an online store that sells various types of products, such as clothes, mobile phones, home appliances, and other products. Excellent product quality and competitive prices.
+        \n\nThis application is just a demo of the items on Envato</string>
+    <string name="title_detail_order">Rincian Order</string>
+
+    <!-- Activity Setting : xml/setting_preference.xml -->
+    <string name="app_version">Version</string>
+    <string name="developer_email">bantuin.group@gmail.com</string>
+    <string name="copyright">Copyright © 2018 Bantuin Group. \nAll right reserved</string>
+    <string name="version_unknown">Unknown</string>
+
+    <string-array name="kota">
+        <item>Pilih Kota</item>
+        <item>Malang</item>
+        <item>Batu</item>
+    </string-array>
+
+    <string-array name="kab">
+        <item>Pilih Kabupaten</item>
+        <item>Malang</item>
+    </string-array>
+
+    <string-array name="kec">
+        <item>Pilih Kecamatan</item>
+        <item>Malang</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Other String -->
+    <string name="failed_text">Failed When Load Data</string>
+    <string name="no_internet_text">Tidak ada koneksi internet</string>
+    <string name="no_item">Kosong</string>
+    <string name="msg_data_loaded">Data loaded</string>
+    <string name="msg_failed_load_data">Proses pengambilan data gagal</string>
+    <string name="title_delete_confirm">Delete Confirmation</string>
+    <string name="content_delete_confirm">Are you sure want to delete all&#160;</string>
+    <string name="delete_success">Delete successfully</string>
+    <string name="msg_copied_clipboard">Text copied to clipboard</string>
+    <string name="failed">Failed</string>
+    <string name="txt_cari_vendor">Proses Pencarian Vendor ....</string>
+    <string name="txt_signup">Mohon Tunggu Sebentar ....</string>
+    <string name="txt_login">Mohon Tunggu Sebentar ....</string>
+    <string name="txt_order">Proses Pengambilan Data....</string>
+
+    <string name="OK">OK</string>
+    <string name="GOT_IT">GOT IT</string>
+    <string name="YES">YA</string>
+    <string name="NO">TIDAK</string>
+    <string name="SETTING">SETTING</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="CLOSE">TUTUP</string>
+    <string name="UPDATE">UPDATE</string>
+    <string name="DISMISS">DISMISS</string>
+    <string name="HIDE">HIDE</string>
+    <string name="RETRY">RETRY</string>
+    <string name="TRY_AGAIN">COBA LAGI</string>
+    <string name="CARI_LOKASI">Tentukan Lokasi Pemesanan</string>
+    <string name="DETAILS">DETAILS</string>
+    <string name="FAILED">FAILED</string>
+    <string name="TYPE_SEARCH">SEARCH</string>
+    <string name="NO_IMAGE">NO IMAGE</string>
+    <string name="DELETE">DELETE</string>
+    <string name="OPEN">OPEN</string>
+    <string name="SAVE">SIMPAN</string>
+    <string name="NEXT">NEXT</string>
+    <string name="SKIP">SKIP</string>
+    <string name="content_term">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dolor risus, aliquet a erat quis, viverra molestie orci. Suspendisse vehicula porta libero. Nam tincidunt nulla ipsum, vel iaculis risus scelerisque sed. Phasellus venenatis, enim vel placerat blandit, leo eros bibendum erat, at auctor mauris diam ac risus. Aenean sit amet congue neque, sit amet condimentum elit. Fusce lacinia massa vel nisl scelerisque, in scelerisque dolor elementum. Vivamus leo enim, congue dictum congue vitae, porttitor id purus. Sed eu ultricies erat. Morbi hendrerit, mi ac volutpat commodo, magna turpis pretium nibh, at fringilla eros lorem quis tellus. Praesent porttitor purus nibh, ac vestibulum massa fringilla vel. Pellentesque dapibus nulla quis luctus dictum. In scelerisque ut ex sed facilisis. Nunc eu finibus nulla, ut hendrerit sem. Suspendisse accumsan risus vel diam fringilla iaculis.
+        \n\nQuisque facilisis finibus aliquam. Sed mattis, dui fringilla ornare finibus, orci odio blandit risus, ut maximus dui odio non leo. Donec laoreet lacus nisi, a mollis velit suscipit ac. Quisque faucibus ut nisl in congue. Nam sagittis consectetur tempus. Suspendisse eget posuere dui. Donec ultricies velit ex, vel cursus odio sollicitudin in. Nullam faucibus auctor ligula, eu rhoncus dui facilisis a. Curabitur vel feugiat est. Quisque congue at enim eleifend ultrices. Proin dapibus risus lorem, nec condimentum nunc consequat vitae. Quisque sapien lorem, vestibulum vitae justo eget, fringilla eleifend nisi.
+        \n\nMauris ultricies augue sit amet est sollicitudin laoreet. Fusce ut congue felis. Fusce dictum tristique elit nec iaculis. Mauris sodales tempus fringilla. Fusce nec nunc tempus, tempor sapien sit amet, ultricies erat. Mauris ultrices ac lorem ultrices facilisis. Nam pharetra, nisi a imperdiet interdum, nunc justo ultricies nisl, a laoreet massa dui vel enim. Pellentesque et magna ac tellus ullamcorper malesuada a ac nisl. Curabitur id est et neque convallis accumsan. Aliquam eleifend varius massa. Curabitur eu finibus tortor.
+        \n\nVivamus aliquam nisl rutrum orci volutpat porta in ornare est. Quisque ligula ipsum, vulputate id aliquam vitae, semper vitae orci. Nam non pulvinar ligula, eget tincidunt ante. Quisque sapien massa, varius tempus pretium id, vehicula at magna. Ut ut ultrices augue. Nam nec ullamcorper tellus, at finibus lectus. Fusce vel iaculis mauris, id porta nulla. Aenean ac mollis sapien. Morbi imperdiet augue tempus nulla luctus, sit amet feugiat purus elementum.
+    </string>
+
+    <string name="font"> pacifico </string>
+</resources>

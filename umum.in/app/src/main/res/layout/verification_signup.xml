@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_slider_intro"
+    tools:context=".ui.Signup.Signup">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <TextView
+        android:id="@+id/textView_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Kami telah mengirimkan kode melalui SMS ke nomor"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/txtPhone_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView_signup"
+        android:text="+6399522874699"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        />
+    <TextView
+        android:id="@+id/textView2_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Masukan Kode"
+        android:layout_below="@id/txtPhone_signup"
+        android:textColor="@android:color/black"
+        />
+
+    <EditText
+        android:id="@+id/ver_edit_signup"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:maxLength="11"
+        android:layout_below="@id/textView2_signup"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:id="@+id/submit_btn_signup"
+        android:layout_below="@+id/ver_edit_signup"
+        android:textColor="#FFF"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#ffda44"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="Submit"
+        />
+    <!--
+    <Button
+        android:id="@+id/submit_btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ver_edit_signup"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/loginbc"
+        android:text="Kirim"
+        />
+        -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/submit_btn_signup"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:id="@+id/container_link_otp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kirim ulang dalam  "
+
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/container_tunggu_countdown"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NN"
+                android:id="@+id/countdownOTP"
+                android:textStyle="bold"
+                android:textColor="#000"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" detik"
+                /> </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ver_baru"
+            android:textSize="15sp"
+            android:id="@+id/tvKodeVerifikasiBaru"
+            android:textColor="#49c8d9"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

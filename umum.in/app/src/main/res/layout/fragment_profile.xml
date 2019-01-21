@@ -1,0 +1,298 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="@string/hello_blank_fragment" />-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/pref_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/akun"
+            android:backgroundTint="#f9f9f9"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:visibility="visible"
+                    android:id="@+id/imgCustOnProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_profile"
+                    android:padding="10dp"
+
+                    android:tint="#919191" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgCustOnProfile"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/cont_profil"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/cont_no_telp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="No Tlpn : "
+                            android:textSize="15dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/notlpn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="+6285604044550"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/cont_no_telp"
+                        android:id="@+id/cont_nama_profil"
+                        >
+
+                        <TextView
+                            android:id="@+id/namaCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="Nama"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                    <!-- batas atas -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp">
+
+
+
+                        <TextView
+                            android:id="@+id/edit"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="Edit"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="#1193d4"
+                            />
+                    </LinearLayout>
+                    <!-- batas bawah -->
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="25dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ico_poin"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ico_money" />
+
+                    <TextView
+                        android:id="@+id/poin_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ico_poin"
+                        android:layout_marginTop="20dp"
+                        android:text="100 Poin"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#919191"
+            android:paddingTop="1dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- batas atas -->
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:id="@+id/panduanPenggunaan"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_help"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Panduan Penggunaan"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        />
+                </LinearLayout>
+                <!--batas bawah -->
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:id="@+id/syarat"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_syarat"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Syarat dan ketentuan"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/hubungiKami"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_cs"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Hubungi Kami"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/rate"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_feedback_app"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Nilai Kami"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:id="@+id/btn_logout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/ic_logout"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Keluar"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

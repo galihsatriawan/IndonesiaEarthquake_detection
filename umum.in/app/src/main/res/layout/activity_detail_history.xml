@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_progress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/contKoneksiGagal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:text="Koneksi Terputus"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/conten_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/toolbar_simple_history"
+                layout="@layout/simple_toolbar" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@id/container_btn_progress"
+                android:layout_below="@+id/toolbar_simple_history">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_normal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/cont_tunggu_bayar"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txtIdPembayaran"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="Pengerjaan Menunggu Pembayaran"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/txtHargaPembayaran"
+                            android:layout_below="@+id/txtIdPembayaran"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="Rp. 3000"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/txtPembayaran"
+                            android:layout_below="@+id/txtHargaPembayaran"
+                            android:textSize="15sp"
+                            android:text="Pengerjaan Menunggu Pembayaran"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:backgroundTint="@android:color/holo_blue_light"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/btn_detail_bayar"
+                            android:layout_below="@+id/txtPembayaran"
+                            android:text="Detail Pembayaran"/>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_id_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="No. Order "
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtIdOrder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Alamat"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtAlamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Malang, Sumberpucung"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_uraian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Rincian Kerusakan"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtDeskripsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Atap Rumah Hilang, Dinding juga hilang"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Status"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Order Terselesaikan"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_waktu_mulai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Waktu Order"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtDateWork"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_waktu_selesai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Waktu Selesai"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtDateSelesai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_pro_biaya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Biaya"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtBiaya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/cont_pro_saran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margins_normal"
+                        android:layout_marginLeft="@dimen/margins_normal"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="Review"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ActProgTxtSaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="@font/ubuntu_light"
+                            android:text="-"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cont_detail_tukang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/cont_pro_img_tukang"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margins_normal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/frameLayoutFotoTukang"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:paddingBottom="10dp"
+                                        >
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:id="@+id/img_tukang"
+                                            android:layout_width="144dp"
+                                            android:layout_height="144dp"
+                                            android:layout_centerInParent="true"
+                                            android:layout_gravity="center"
+                                            android:paddingBottom="10dp"
+
+                                            android:src="@drawable/ic_profile" />
+                                    </FrameLayout>
+                                    <android.support.v7.widget.AppCompatRatingBar
+                                        android:id="@+id/rt_bar"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:isIndicator="true"
+                                        android:numStars="5"
+                                        android:paddingTop="10dp"
+                                        android:rating="2.5"
+                                        android:stepSize="1.5"
+                                        android:theme="@style/ratingbar" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margins_normal">
+
+                                <LinearLayout
+
+                                    android:id="@+id/cont_pro_nama_tukang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/margins_normal"
+                                    android:layout_marginLeft="@dimen/margins_normal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text="Tukang"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text=":"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/ActProgTxtNamaTukang"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text="Suminto"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/cont_pro_id_tukang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/cont_pro_nama_tukang"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="@dimen/margins_normal"
+                                    android:layout_marginLeft="@dimen/margins_normal"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text=" Vendor"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text=" :"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/ActProgTxtVendor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4dp"
+                                        android:fontFamily="@font/ubuntu_light"
+                                        android:text="342123"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/cont_pro_btn_call_and_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="@dimen/margins_normal">
+
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+            <LinearLayout
+                android:id="@+id/container_btn_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/cont_persetujuan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margins_normal">
+
+                <Button
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:id="@+id/btn_batal_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#929293"
+                    android:text="Batal"
+                    android:visibility="gone" />
+
+                <Button
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:background="#235d9f"
+                    android:id="@+id/btn_kembali_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="kembali"
+                    android:visibility="gone" />
+                <Button
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:id="@+id/btn_setuju_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="#235d9f"
+                    android:text="Setuju"
+                    android:visibility="gone" />
+
+                <Button
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:background="#235d9f"
+                    android:id="@+id/btn_selesai_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Pengerjaan Selesai"
+                    android:visibility="gone" />
+
+                <Button
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:background="#235d9f"
+                    android:id="@+id/btn_kirim_saran_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Kirim Saran"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/cont_persetujuan"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:id="@+id/line"
+                    android:orientation="horizontal"
+                    android:background="#235d9f">
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

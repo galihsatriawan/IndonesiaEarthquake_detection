@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_progress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/contKoneksiGagal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:text="Koneksi Terputus"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/conten_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="350dp">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="35sp"
+                        android:layout_gravity="center"
+                        android:text="Total Pembayaran"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:text="Kerusakan"
+
+                            android:layout_height="wrap_content" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginRight="@dimen/margins_normal"
+                            android:layout_marginLeft="@dimen/margins_normal"
+                            android:text=":"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/kategoriKerusakan"
+                            android:textSize="20sp"
+                            android:text="Komputer"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:text="Biaya         "
+
+                            android:layout_height="wrap_content" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginRight="@dimen/margins_normal"
+                            android:layout_marginLeft="@dimen/margins_normal"
+                            android:text=":"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_margin="@dimen/margins_normal"
+                        android:layout_gravity="center"
+                        android:id="@+id/biayaTotal"
+                        android:text="Rp. 150.000"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/cont_persetujuan"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:id="@+id/line"
+                    android:orientation="horizontal"
+                    android:background="#235d9f">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/cont_kode_promo"
+                    android:background="@drawable/border_progress"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/cont_promo_voucher"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_width="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_height="20dp"
+                            android:id="@+id/icon_coupon"
+                            android:src="@drawable/ico_coupon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtKodePromo"
+                            android:layout_toRightOf="@id/icon_coupon"
+                            android:text="Kode Promo"
+                            android:layout_centerVertical="true"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/txtKodePromo"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="6dp"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/txtDeskripsiPromo"
+                            />
+                        <EditText
+                            android:background="@drawable/border_progress"
+                            android:layout_width="120dp"
+                            android:layout_toRightOf="@id/txtKodePromo"
+                            android:textAlignment="center"
+                            android:inputType="textCapCharacters"
+                            android:id="@+id/editKodePromoVoucher"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="6dp"
+                            android:hint="Masukkan Kode Promo"
+                            android:textSize="12sp"
+                            android:layout_height="30dp"
+
+                            />
+                        <Button
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="4dp"
+                            android:text="Gunakan"
+                            android:textSize="11sp"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/btn_gunakan"
+
+                            android:layout_alignParentRight="true"
+                            android:padding="0dp"/>
+                        <Button
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:text="Batalkan"
+
+                            android:textSize="11sp"
+                            android:layout_marginRight="4dp"
+                            android:visibility="gone"
+                            android:background="@android:color/holo_red_light"
+                            android:id="@+id/btn_batalkan"
+                            android:layout_alignParentRight="true"
+                            android:padding="0dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/border_progress"
+                    android:id="@+id/cont_tukar_poin"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/cont_point"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/icoPoint"
+                            android:src="@drawable/ico_money"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtTukarkanPoint"
+                            android:textSize="11sp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/icoPoint"
+                            android:text="Tukarkan 100 Poin Anda"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:text="[- Rp. 10.000 ]"
+                            android:textSize="11sp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/minus_harga"
+                            android:layout_toRightOf="@id/txtTukarkanPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/switchPoint"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/border_progress"
+                    android:id="@+id/cont_total_bawah"
+
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/cont_setuju_total"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text="Total : "
+                            android:textSize="13sp"
+                            android:id="@+id/subTotal"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/subTotal"
+                            android:id="@+id/hargaCoret"
+                            android:textSize="12sp"
+                            android:text="Rp. 160.000"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hargaAkhir"
+                            android:layout_marginLeft="10dp"
+                            android:text="Rp. 150.000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/hargaCoret"
+                            android:textColor="@android:color/holo_blue_dark"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dapatkanPoint"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Dapatkan 15 Poin"
+                            android:layout_below="@+id/hargaAkhir"
+                            android:layout_toRightOf="@id/subTotal"
+                            android:textColor="@android:color/holo_blue_bright"/>
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Bayar"
+                            android:textColor="@android:color/white"
+                            android:id="@+id/btn_setuju_total"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:layout_alignParentRight="true"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

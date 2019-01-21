@@ -1,0 +1,185 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cont_layout_order"
+        >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/container_button_order"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margins_normal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@id/container_title"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title_kategori_order"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="@android:color/black"
+                    android:text="TV"/>
+                <requestFocus/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/container_lokasi"
+                android:layout_below="@+id/container_title">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/container_kota"
+                android:layout_below="@+id/container_lokasi">
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/container_uraian_permasalahan"
+                android:layout_marginTop="14dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/container_kota"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rincian Kerusakan"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:textColor="@android:color/black"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/editTxtDeskripsi"
+                    android:hint="Deskripsikan detail kerusakan atau service yang anda inginkan"
+                    android:layout_marginBottom="@dimen/margins_normal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"/>
+                <requestFocus/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/container_foto_lampiran"
+                android:layout_marginTop="14dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/container_uraian_permasalahan"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lampiran Foto (Masih Dalam Pengembangan)"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:textColor="@android:color/black"/>
+                <requestFocus/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:src="@drawable/foto"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/imgFotoUpload"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/container_catatan_tambahan"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="14dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/container_foto_lampiran"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Catatan Tambahan"
+
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:textColor="@android:color/black"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/editTxtCatatan"
+                    android:hint="Contoh : Konfirmasi terlebih dahulu sebelum berangkat/datang"
+                    android:layout_marginBottom="@dimen/margins_normal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/container_button_order"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/line"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary">
+        </LinearLayout>
+
+        <Button
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/btn_order"
+            android:text="Lanjut"/>
+        <requestFocus/>
+    </RelativeLayout>
+        <include android:id="@+id/lyt_map"
+            layout="@layout/activity_order_with_map"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</RelativeLayout>

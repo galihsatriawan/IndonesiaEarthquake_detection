@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipeDashboard">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/lyt_failed"
+            layout="@layout/include_failed"
+            android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/cont_fragment_dashboard"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/frag_gv1"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="@dimen/margins_normal"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/frag_judulGv1"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:text="Elektronik"/>
+
+                <in.umum.widget.ExpandableHeightGridView
+                    android:id="@+id/frag_gvLayanan1"
+                    android:isScrollContainer="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:columnWidth="90dp"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/frag_gv2"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="@dimen/margins_normal"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/frag_judulGv2"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:text="Bangunan"/>
+                <in.umum.widget.ExpandableHeightGridView
+                    android:layout_margin="8dp"
+                    android:id="@+id/frag_gvLayanan2"
+                    android:isScrollContainer="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="65dp"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/frag_gv3"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="@dimen/margins_normal"
+                    android:layout_marginLeft="@dimen/margins_normal"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/frag_judulGv3"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:text="Mesin"/>
+                <in.umum.widget.ExpandableHeightGridView
+                    android:layout_margin="8dp"
+                    android:id="@+id/frag_gvLayanan3"
+                    android:isScrollContainer="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="65dp"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

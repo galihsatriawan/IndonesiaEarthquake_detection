@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.umum.ui.Order.DaftarVendorActivity">
+
+    <include android:id="@+id/lyt_progress"
+        layout="@layout/include_progress_bar"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/lyt_failed"
+        layout="@layout/include_failed"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/cont_isi_daftar_vendor"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="@dimen/margins_normal"
+        android:layout_marginRight="@dimen/margins_normal"
+        android:layout_width="match_parent"
+        android:id="@+id/cont_kategoriVend"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/kategoriVend"
+            android:layout_margin="@dimen/margins_normal"
+            android:textSize="@dimen/text_size_judul"
+            android:text="Kategori Bangunan"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cont_kategoriVend">
+        <in.umum.widget.ExpandableHeightGridView
+
+            android:isScrollContainer="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:columnWidth="150dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="4dp"
+            android:id="@+id/gridVendor"/>
+
+    </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

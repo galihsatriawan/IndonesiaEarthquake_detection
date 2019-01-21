@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+
+        android:layout_margin="@dimen/margins_normal"
+        android:background="@drawable/bg_putih_round"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margins_normal"
+                android:src="@android:drawable/ic_menu_search"
+
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/btn_tentukan_lokasi"
+                android:textSize="15sp"
+                android:backgroundTint="@android:color/white"
+                style= "@style/Widget.Design.TextInputLayout"
+                android:textColor="@color/grey_20"
+                android:layout_marginLeft="4dp"
+                android:hint="@string/CARI_LOKASI"
+                android:fontFamily="@font/ubuntu_light"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorPrimaryDark"></LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:id="@+id/btn_lanjut_vendor"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="4dp"
+                android:text="LANJUT"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
